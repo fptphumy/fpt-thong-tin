@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phiếu khảo sát FPT - Doanh nghiệp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      background-color: #0055a5;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    details {
+      margin-bottom: 20px;
+    }
+    summary {
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 10px;
+      background: #e0ecff;
+      border: 1px solid #a8c8ff;
+      border-radius: 6px;
+    }
+    .checkbox-group, .radio-group {
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+    button {
+      background: #ff6600;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    button:hover {
+      background: #e65c00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Phiếu khảo sát dịch vụ FPT dành cho doanh nghiệp</h1>
+    <form action="https://formspree.io/f/xgvyjrnj" method="POST">
+
+      <details open>
+        <summary>A. Thông tin cơ bản</summary>
+        <label><b>Tên đơn vị</b> *</label>
+        <input type="text" name="ten_don_vi" required>
+
+        <label><b>Người liên hệ</b> *</label>
+        <input type="text" name="nguoi_lien_he" required>
+
+        <label><b>Chức vụ</b></label>
+        <input type="text" name="chuc_vu">
+
+        <label><b>Số điện thoại</b> *</label>
+        <input type="tel" name="so_dien_thoai" required>
+
+        <label><b>Địa chỉ cụ thể</b></label>
+        <input type="text" name="dia_chi_cu_the">
+
+        <label><b>Tỉnh/Thành</b> *</label>
+        <input type="text" name="tinh_thanh" required>
+
+        <label><b>Loại hình cơ sở</b> *</label>
+        <select name="loai_hinh" required>
+          <option value="">-- Chọn loại hình --</option>
+          <option value="Khách sạn">Khách sạn</option>
+          <option value="Resort">Resort</option>
+          <option value="Bệnh viện">Bệnh viện</option>
+          <option value="KS nhỏ / Homestay">KS nhỏ / Homestay</option>
+          <option value="Khác">Khác</option>
+        </select>
+
+        <label><b>Số lượng phòng</b> *</label>
+        <input type="number" name="so_phong" required>
+
+        <label><b>Số lượng Tivi</b> *</label>
+        <input type="number" name="so_tivi" required>
+      </details>
+
+      <details>
+        <summary>B. Khảo sát dịch vụ Internet</summary>
+        <label><b>Nhà cung cấp hiện tại</b> *</label>
+        <div class="checkbox-group">
+          <input type="checkbox" name="ncc_internet" value="FPT Telecom"> FPT Telecom<br>
+          <input type="checkbox" name="ncc_internet" value="VNPT"> VNPT<br>
+          <input type="checkbox" name="ncc_internet" value="Viettel"> Viettel<br>
+          <input type="checkbox" name="ncc_internet" value="Không dùng Internet"> Không dùng Internet<br>
+          <input type="checkbox" name="ncc_internet" value="Khác"> Khác<br>
+        </div>
+
+        <label><b>Mức chi phí Internet (VNĐ/tháng)</b> *</label>
+        <input type="text" name="chi_phi_internet" required>
+      </details>
+
+      <details>
+        <summary>C. Khảo sát dịch vụ Truyền hình</summary>
+        <label><b>Nhà cung cấp truyền hình hiện tại</b></label>
+        <div class="checkbox-group">
+          <input type="checkbox" name="ncc_truyen_hinh" value="VTVCab"> VTVCab<br>
+          <input type="checkbox" name="ncc_truyen_hinh" value="SCTV"> SCTV<br>
+          <input type="checkbox" name="ncc_truyen_hinh" value="MyTV"> MyTV (VNPT)<br>
+          <input type="checkbox" name="ncc_truyen_hinh" value="Viettel"> Viettel<br>
+          <input type="checkbox" name="ncc_truyen_hinh" value="FPT Play"> FPT Play<br>
+          <input type="checkbox" name="ncc_truyen_hinh" value="Khác"> Khác<br>
+        </div>
+
+        <label>Chi phí truyền hình trung bình (VNĐ/phòng)</label>
+        <input type="text" name="chi_phi_truyen_hinh">
+      </details>
+
+      <details>
+        <summary>D. Khảo sát dịch vụ Camera</summary>
+        <label><b>Nhà cung cấp camera hiện tại</b> *</label>
+        <div class="checkbox-group">
+          <input type="checkbox" name="ncc_camera" value="FPT Telecom"> FPT Telecom<br>
+          <input type="checkbox" name="ncc_camera" value="Hikvision"> Hikvision<br>
+          <input type="checkbox" name="ncc_camera" value="Kbvision"> Kbvision<br>
+          <input type="checkbox" name="ncc_camera" value="Camera đầu ghi"> Camera đầu ghi<br>
+          <input type="checkbox" name="ncc_camera" value="Không dùng Camera"> Không dùng Camera<br>
+          <input type="checkbox" name="ncc_camera" value="Khác"> Khác<br>
+        </div>
+
+        <label><b>Tổng số lượng camera</b> *</label>
+        <input type="number" name="so_luong_camera" required>
+
+        <label><b>Mức chi phí hiện tại (VNĐ/tháng)</b> *</label>
+        <input type="text" name="chi_phi_camera" required>
+      </details>
+
+      <button type="submit">Gửi khảo sát</button>
+    </form>
+  </div>
+</body>
+</html>
